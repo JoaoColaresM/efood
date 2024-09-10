@@ -1,6 +1,7 @@
 import {Cartao, Imagem, Descricao, Tags, Botao, TituloNota, Estrela} from './styles'
 import Tag from '../Tag'
 import estrela from '../../assets/imagens/estrela.svg'
+import { Link } from 'react-router-dom'
 
 type Props = {
     id: number
@@ -29,7 +30,9 @@ const Restaurantes = ({id,descricao,imagem,nota,tags,titulo}:Props) => (
             </Estrela>
         </TituloNota>
         <Descricao>{descricao}</Descricao>
-        <Botao>saiba mais</Botao>
+        <Link to={'/Perfil'}>
+            <Botao>saiba mais</Botao>
+        </Link>
     </Cartao>
 )
 
